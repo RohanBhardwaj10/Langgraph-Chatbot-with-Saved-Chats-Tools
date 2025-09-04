@@ -1,4 +1,4 @@
-LangGraph Chatbot with Saved Chats & Tools
+## LangGraph Chatbot with Saved Chats & Tools
 
 A robust, stateful conversational AI built using LangGraph, LangChain, OpenAI, and tool integration — with full session persistence.
 
