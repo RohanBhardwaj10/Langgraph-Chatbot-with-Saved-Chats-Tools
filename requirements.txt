@@ -1,5 +1,5 @@
 streamlit
-langgraph
+langgraph>=0.0.41
 langchain
 langchain-core
 langchain-openai
