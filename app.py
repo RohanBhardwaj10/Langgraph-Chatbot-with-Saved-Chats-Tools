@@ -40,7 +40,11 @@ for thread_id in st.session_state['chat_threads']:
         if st.sidebar.button(str(thread_id)):
                 st.session_state['thread_id']=thread_id
                 state_snapshot = load_conversation(thread_id)
-                messages = state_snapshot.values['messages']
+                if state_snapshot is None:
+                        messages=[]
+                else:
+                        messages = state_snapshot.values['messages']
+
                 temp_messages = []
                 for msg in messages:
                         if isinstance(msg, HumanMessage):
@@ -109,5 +113,6 @@ if user_input:
      
                 
     st.session_state['message_history'].append({'role': 'assistant', 'content': ai_message})
+
 
 
